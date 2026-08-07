@@ -1,0 +1,22 @@
+{
+  "project": "AEM Product Showcase",
+  "plugins": [
+    {
+      "id": "asset-library",
+      "title": "Assets",
+      "environments": ["edit"],
+      "url": "https://experience.adobe.com/solutions/CQ-assets-selectors/assets-selector.html",
+      "isPalette": true,
+      "paletteRect": "top: auto; bottom: 0; left: 0; height: 40vh; width: 100%;",
+      "includePaths": ["**.docx**"]
+    },
+    {
+      "id": "tag-manager",
+      "title": "Tags",
+      "environments": ["edit"],
+      "url": "/tools/sidekick/tags.html",
+      "isPalette": false,
+      "includePaths": ["**.docx**"]
+    }
+  ]
+}

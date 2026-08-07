@@ -11,7 +11,7 @@
  */
 
 :root {
-  /* colors */
+  /* ── Brand colors ──────────────────────────────────────────── */
   --background-color: white;
   --light-color: #f8f8f8;
   --dark-color: #505050;
@@ -19,7 +19,14 @@
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
 
-  /* fonts */
+  /* Showcase accent palette */
+  --accent-color: #fa0f00;
+  --accent-hover-color: #c40c00;
+  --success-color: #178f1f;
+  --surface-color: #fff;
+  --border-color: #dadada;
+
+  /* ── Typography ────────────────────────────────────────────── */
   --body-font-family: roboto, roboto-fallback, sans-serif;
   --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
 
@@ -36,8 +43,29 @@
   --heading-font-size-s: 24px;
   --heading-font-size-xs: 22px;
 
-  /* nav height */
+  /* ── Layout ────────────────────────────────────────────────── */
   --nav-height: 64px;
+  --content-max-width: 1200px;
+
+  /* ── Motion ────────────────────────────────────────────────── */
+  --transition-speed: 0.2s;
+  --transition-ease: ease;
+
+  /* ── Spacing scale ─────────────────────────────────────────── */
+  --spacing-xs: 8px;
+  --spacing-s: 16px;
+  --spacing-m: 24px;
+  --spacing-l: 40px;
+  --spacing-xl: 64px;
+
+  /* ── Radius ────────────────────────────────────────────────── */
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-pill: 2em;
+
+  /* ── Shadows ───────────────────────────────────────────────── */
+  --shadow-card: 0 2px 8px rgb(0 0 0 / 8%);
+  --shadow-card-hover: 0 4px 20px rgb(0 0 0 / 14%);
 }
 
 /* fallback fonts */

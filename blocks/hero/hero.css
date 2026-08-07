@@ -1,37 +1,148 @@
+/*
+ * Copyright 2024 Adobe. All rights reserved.
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+/* ─── Container overrides ─────────────────────────────────────── */
+
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
 }
 
+/* ─── Block root ──────────────────────────────────────────────── */
+
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: var(--background-color, #fff);
 }
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
-}
-
-.hero picture {
+/* dark overlay for legibility over any background image */
+.hero::after {
+  content: '';
   position: absolute;
-  z-index: -1;
   inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+  background: linear-gradient(
+    to right,
+    rgb(0 0 0 / 60%) 0%,
+    rgb(0 0 0 / 30%) 60%,
+    rgb(0 0 0 / 0%) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
 }
 
-.hero img {
-  object-fit: cover;
+/* ─── Background picture ──────────────────────────────────────── */
+
+.hero > div:first-child {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  line-height: 0;
+}
+
+.hero > div:first-child picture,
+.hero > div:first-child img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ─── Content overlay ─────────────────────────────────────────── */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  padding: 48px 24px;
+  margin: 0 auto 0 0;
+}
+
+.hero-content h1 {
+  margin: 0 0 16px;
+  font-size: var(--heading-font-size-xxl, 55px);
+  font-family: var(--heading-font-family, sans-serif);
+  font-weight: 700;
+  line-height: 1.1;
+  color: inherit;
+  text-shadow: 0 2px 8px rgb(0 0 0 / 30%);
+}
+
+.hero-content h2 {
+  margin: 0 0 24px;
+  font-size: var(--heading-font-size-m, 22px);
+  font-weight: 400;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.hero-content p {
+  margin: 0 0 16px;
+  font-size: var(--body-font-size-s, 16px);
+  line-height: 1.6;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.hero-content .button-wrapper {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* override global button colours for hero context */
+.hero-content a.button.primary {
+  border-color: var(--background-color, #fff);
+  background-color: var(--background-color, #fff);
+  color: var(--text-color, #131313);
+}
+
+.hero-content a.button.primary:hover,
+.hero-content a.button.primary:focus-visible {
+  background-color: var(--light-color, #f8f8f8);
+  border-color: var(--light-color, #f8f8f8);
+}
+
+.hero-content a.button.secondary {
+  border-color: var(--background-color, #fff);
+  background-color: transparent;
+  color: var(--background-color, #fff);
+}
+
+.hero-content a.button.secondary:hover,
+.hero-content a.button.secondary:focus-visible {
+  background-color: rgb(255 255 255 / 20%);
+}
+
+/* ─── Responsive ──────────────────────────────────────────────── */
+
+@media (width >= 600px) {
+  .hero {
+    min-height: 520px;
+  }
 }
 
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    min-height: 600px;
+  }
+
+  .hero-content {
+    padding: 64px 48px;
+    margin-left: calc((100% - 1200px) / 2);
+    margin-left: max(48px, calc((100% - 1200px) / 2));
   }
 }
