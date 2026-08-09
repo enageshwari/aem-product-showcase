@@ -1,0 +1,8 @@
+stage:
+  preview:
+    allow:
+      - tech.nageshwari@gmail.com
+      - "*"
+  live:
+    allow:
+      - "*"
