@@ -1,4 +1,4 @@
 mountpoints:
   /:
-    url: https://content.da.live/enag/aem-product-showcase/
+    url: https://content.da.live/enageshwari/aem-product-showcase/
     type: markup
