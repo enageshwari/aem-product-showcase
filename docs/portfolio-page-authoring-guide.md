@@ -4,7 +4,7 @@ This document explains exactly how to recreate the portfolio page in da.live or 
 Each section below is a block table. Copy each table into your doc in order.
 
 The final published URL will be:
-https://main--aem-product-showcase--enageshwari.aem.live/
+https://main--adobe-cloud-platform--enageshwari.aem.live/
 
 ---
 
@@ -138,7 +138,7 @@ Nageshwari Elango · tech.nageshwari@gmail.com · +1 408-772-8154 · github.com/
 
 - [ ] All tables entered in da.live / Google Doc
 - [ ] Doc connected to aem-product-showcase repo via Sidekick
-- [ ] Click Preview — verify layout at https://main--aem-product-showcase--enageshwari.aem.page/
-- [ ] Click Publish — live at https://main--aem-product-showcase--enageshwari.aem.live/
+- [ ] Click Preview — verify layout at https://main--adobe-cloud-platform--enageshwari.aem.page/
+- [ ] Click Publish — live at https://main--adobe-cloud-platform--enageshwari.aem.live/
 - [ ] Run Lighthouse on the live URL — target 100/100
 - [ ] Send URL to Adobe hiring team (see hiring-email.md)

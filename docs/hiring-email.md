@@ -13,7 +13,7 @@ and wanted to share something a bit different alongside my resume.
 I built a live portfolio site using **AEM Edge Delivery Services** that maps each
 requirement in the job description to specific work I've shipped at AWS:
 
-**https://main--aem-product-showcase--enageshwari.aem.live/**
+**https://main--adobe-cloud-platform--enageshwari.aem.live/**
 
 A few things worth noting about the site itself:
 - It's built on the AEM boilerplate with custom blocks (no frameworks, vanilla JS)
