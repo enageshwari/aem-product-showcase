@@ -10,32 +10,38 @@ Hi [Hiring Manager's name],
 I'm applying for the Senior Backend Engineer – Cloud Platform role (R168509) in San Jose
 and wanted to share something a bit different alongside my resume.
 
-I built a live portfolio site using **AEM Edge Delivery Services** that maps each
-requirement in the job description to specific work I've shipped at AWS:
+To demonstrate my alignment with the role and my speed in adopting Adobe's web tech stack,
+I built a lightweight interactive portfolio on **AEM Edge Delivery Services**:
 
 **https://main--adobe-cloud-platform--enageshwari.aem.live/**
 
+It details my experience in Java microservices, cloud infrastructure, and AI-first
+engineering — mapped directly to each requirement in the R168509 job description.
+
 A few things worth noting about the site itself:
-- It's built on the AEM boilerplate with custom blocks (no frameworks, vanilla JS)
-- Content is authored in Google Docs / da.live — the same authoring model AEM EDS uses
-- It scores 100/100 on Lighthouse — the architecture deliberately separates LCP-critical
-  resources from lazy-loaded ones, exactly as AEM Edge Delivery is designed to work
-- The code is at: https://github.com/enageshwari/aem-product-showcase
+- Built on the AEM boilerplate with custom blocks (`feature-grid`, `hero`, `match`) —
+  no frameworks, vanilla JS only
+- Content authored in da.live — the same authoring model AEM EDS uses in production
+- 100/100 Lighthouse score — architecture deliberately separates LCP-critical resources
+  from lazy-loaded ones, exactly as AEM Edge Delivery is designed to work
+- Active OSS contributor to ACS AEM Commons:
+  https://github.com/Adobe-Consulting-Services/acs-aem-commons/pull/3787
+- Code: https://github.com/enageshwari/adobe-cloud-platform
 
 On the role itself — the three areas where I think I'm directly on target:
 
-1. **Java + Cloud APIs at scale.** 10 years at AWS building microservices for EMR and
-   SageMaker Unified Studio. The EMR Instance Fleets APIs I designed manage cluster
-   lifecycle across EC2 spot and on-demand instances for thousands of customers.
+1. **Java + Cloud APIs at scale.** 10 years at AWS building Java microservices. Built
+   EMR Instance Fleets and App UI APIs with REST resilience, concurrent thread safety,
+   and high-throughput job isolation serving thousands of customers globally.
 
-2. **DevOps ownership end-to-end.** I don't hand off to a DevOps team — I own it.
-   CI/CD pipelines, integration test suites, regional rollout automation, AMI build
-   pipelines deploying to all AWS regions. The EMR region expansion work I led reduced
-   manual steps to near-zero with config-driven, metrics-validated automated rollout.
+2. **DevOps ownership end-to-end.** I own CI/CD, not just code. Pipelines, integration
+   test suites, regional rollout automation, AMI build pipelines to all AWS regions.
+   EMR region expansion reduced manual steps to near-zero with config-driven,
+   metrics-validated automated rollout.
 
-3. **AI-first development.** I implemented Agentic Chat in SageMaker Unified Studio
-   using Amazon Kiro/Q, and used Model Context Protocol (MCP) to connect systems and
-   accelerate the Spark Connect integration — exactly the kind of AI-assisted engineering
+3. **AI-first development.** Pioneered spec-driven engineering using Amazon Kiro/Q.
+   Integrated Model Context Protocol (MCP) to standardize cross-system service bindings
+   for the Spark Connect integration — exactly the kind of AI-assisted engineering
    the role is looking for.
 
 My resume is attached. I'd welcome the chance to talk through any of this.

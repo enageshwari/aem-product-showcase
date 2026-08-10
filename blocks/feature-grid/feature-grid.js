@@ -92,13 +92,6 @@ function buildCard(product) {
     body.append(p);
   }
 
-  if (product.Price || product.price) {
-    const priceEl = document.createElement('p');
-    priceEl.className = 'feature-grid-card-price';
-    priceEl.textContent = product.Price || product.price;
-    body.append(priceEl);
-  }
-
   if (product.Tags || product.tags) {
     const tagWrap = document.createElement('div');
     tagWrap.className = 'feature-grid-card-tags';
@@ -192,10 +185,10 @@ function buildFilterBar(tags, grid) {
  * Parses authored block rows into product objects.
  * Expected authored table structure (from Google Docs / da.live):
  *
- * | Feature Grid         |             |              |       |      |             |          |
- * |----------------------|-------------|--------------|-------|------|-------------|----------|
- * | Name                 | Description | Price        | Tags  | Link | CTA Text    | Image    |
- * | Wireless Headphones  | Noise-free  | $299         | Audio | /... | Shop Now    | <image>  |
+ * | Feature Grid         |             |       |      |             |
+ * |----------------------|-------------|-------|------|-------------|
+ * | Name                 | Description | Tags  | Link | CTA Text    |
+ * | EMR Persistent UI    | Pioneered.. | Java  | /... | View on GitHub |
  *
  * @param {HTMLElement} block
  * @returns {{ products: Array, sheetPath: string|null }}
